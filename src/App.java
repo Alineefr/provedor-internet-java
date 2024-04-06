@@ -1,13 +1,25 @@
+import java.util.Scanner;
+
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Olá, bem-vindo a central de atendimento {provedor}");
+       Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Meu nome é {atendente}, sou seu assistente virtual");
+       String nome_provedor = "Fenda do Biquini";      
+       String nome_assistente = "Bob Esponja";
+       String nome_usuario;
+    
+        
+        System.out.printf("Olá, bem-vindo a central de atendimento \"%s\"!", nome_provedor);
 
-        System.out.println("Durante o atendimento siga minhas instruções");
+        System.out.printf("\nMeu nome é  %s, sou seu assistente virtual", nome_assistente);
 
-        System.out.println("Primeiramente informe seu nome");
+        System.out.print("\nDurante o atendimento siga minhas instruções");
 
-        System.out.println("Obrigado {nome}, como posso lhe ajudar?");
+        System.out.print("\nPrimeiramente informe seu nome: ");
+        nome_usuario = scanner.next();
+
+        System.out.printf("Obrigado %s, como posso lhe ajudar?" ,nome_usuario);
+
+        scanner.close();
     }
 }
